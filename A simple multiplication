@@ -20,7 +20,7 @@ var server = http.createServer(function (req,res) {
 server.listen(http_port);
 console.log('Listening to http://localhost:8124');
 
-molt-node.js
+mult-node.js
 var htutil = require("./htutil");
 exports.get = function(req,res){
     res.writeHead(200,{
