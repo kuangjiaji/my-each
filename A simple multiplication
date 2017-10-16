@@ -9,12 +9,6 @@ var server = http.createServer(function (req,res) {
     htutil.loadParams(req,res,undefined);
     if(req.requrl.pathname === '/'){
         require('./home-node').get(req,res);
-    }else if(req.requrl.pathname === '/square'){
-        require('./square-node').get(req,res);
-    }else if(req.requrl.pathname === '/factorial'){
-        require('./factorial-node').get(req,res);
-    }else if(req.requrl.pathname === '/fibonacci'){
-        require('./fibonacci-node').get(req,res);
     }else if(req.requrl.pathname === '/mult'){
         require('./mult-node').get(req,res);
     }else{
@@ -71,9 +65,6 @@ exports.navbar = function(){
     return ["<div class='navbar'>",
         "<p><a href='/'>home</a></p>",
         "<p><a href='/mult'>Multiplication</a></p>",
-        "<p><a href='/square'>Square's</a></p>",
-        "<p><a href='/factorial'>factorial's</a></p>",
-        "<p><a href='/fibonacci'>Fibonacci's</a></p>",
         "</div>"
     ].join('\n');
 }
